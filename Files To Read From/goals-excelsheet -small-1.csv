@@ -1,0 +1,20 @@
+game_id,minute,player,team1score,team2score
+1,18,Redshift 1,1,0
+2,20,Redshift 2,2,0
+3,29,Redshift 3,3,0
+4,57,Redshift 4,3,1
+5,63,Redshift 5,4,1
+6,64,Redshift 6,5,1
+7,69,Redshift 7,6,1
+8,90+,Redshift 8,7,1
+9,18,Redshift 9,0,1
+10,44,Redshift 10,1,1
+11,93,Redshift 11,2,1
+12,109,Redshift 12,3,1
+13,118,Redshift 13,3,2
+14,25,Redshift 14,1,0
+15,29,Redshift 15,1,1
+16,43,Redshift 16,1,2
+17,49,Redshift 17,2,2
+18,66,Redshift 18,3,2
+19,70,Redshift 19,4,2
