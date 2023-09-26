@@ -68,6 +68,7 @@ def create_iam_policy():
                     "s3:ListBucketVersions",
                     "iam:ListRolePolicies",
                     "iam:GetRole",
+                    "iam:PassRole",
                     "iam:ListRoles",
                     "iam:GetRolePolicy",
                     "cloudwatch:PutMetricData"
@@ -80,7 +81,7 @@ def create_iam_policy():
                     "s3:CreateBucket"
                 ],
                 "Resource": [
-                    f"arn:aws:s3:::{aws_input_s3_bucket}"
+                    f"arn:aws:s3:::{aws_input_s3_bucket}-*"
                 ]
             },
             {
@@ -93,6 +94,9 @@ def create_iam_policy():
                 "Resource": [
                     f"arn:aws:s3:::{aws_input_s3_bucket}",
                     f"arn:aws:s3:::{aws_input_s3_bucket}/*",
+                    f"arn:aws:s3:::{aws_input_s3_bucket}-*",
+                    f"arn:aws:s3:::{aws_input_s3_bucket}-*/*",
+                    f"arn:aws:s3:::*/*{aws_input_s3_bucket}/*"
                 ]
             },
             {
@@ -103,7 +107,8 @@ def create_iam_policy():
                     "logs:PutLogEvents"
                 ],
                 "Resource": [
-                    f"arn:aws:logs:*:*:*:/{aws_cloudwatch_log_group}/*"
+                    f"arn:aws:logs:*:*:*:/{aws_cloudwatch_log_group}/*",
+                    f"arn:aws:logs:*:*:*:/{aws_cloudwatch_log_group}-*/*"
                 ]
             },
         ]
